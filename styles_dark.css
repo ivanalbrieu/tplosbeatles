@@ -1,0 +1,217 @@
+/* No se utilizó el selector universal porque destruye el formato de los otros elementos como el contenido o el header. Tampoco utilizé ids para aplicar estilos porque es mejor utilizar clases para eso, funciona mejor, es más estable. No se utilizaron selectores de atributos porque no busco estilos específicos en este sitio web. El selector multiple cambia el estilo erroneamente porque detecta como si fuera un estilo normal, debido a eso no fue utilizado. */
+
+/* Cuerpo de página. */
+body {
+    position: relative;
+	background-color: rgb(102, 79, 63);
+	color: rgb(255, 238, 213);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Fondo del cuerpo de página. */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./img/fondo.jpg);
+    background-size: auto;
+    background-repeat: repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Selector p no se utilizó porque body ya hace el trabajo. */
+
+/* Enlace normal. */
+a {
+	text-decoration: none!important;
+	color:rgb(236, 162, 109);
+}
+
+/* Enlace cuando está el mouse encima. */
+a:hover {
+	text-decoration: none!important;
+	color:hsl(36, 79%, 74%);
+}
+
+/* Header. */
+.menu {
+	background-color: rgb(61, 47, 35) !important;
+	font-family: "Franklin Gothic Bold", "Arial Black", "sans-serif" !important;
+	display: block;
+	position: fixed;
+	margin: 0 auto 100%;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 15px;
+	box-shadow: 5px;
+	z-index: 10;
+}
+
+/* Enlace de header. Combinador descendiente. */
+.menu a{
+	padding-left: 40px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Selector clase para el contenido de la página. */
+.contenido {
+	position: relative;
+	margin: 0 auto 48px;
+	padding: 24px 36px;
+	top: 100px;
+	margin-bottom: 200px;
+	width: 85%;
+	max-width: 1236px;
+	background-color: rgba(54, 48, 40, 90%);
+	border-radius: 3px;
+}
+
+.contenido p{
+	text-align: justify;
+}
+
+/* Enlaces dentro del contenido de la página. Combinador descendiente. */
+.contenido a {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Título principal. */
+h1 {
+	color:rgb(240, 153, 92);
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	font-size: 3.75em;
+}
+
+/* Navegación dentro del contenido. */
+.toc {
+	background-color: rgb(66, 66, 66);
+	border: 1px solid;
+	border-radius: 3px;
+	margin: 24px auto 24px 0;
+	padding: 0;
+	padding-left: 20px;
+	position: relative;
+	border-color:white;
+	width: 40%;
+	max-width: 400px;
+	font-family: rubik,helvetica,arial,sans-serif;
+	color: #cecece !important;
+}
+
+/* Enlaces de la navegación dentro del contenido. Combinador descendiente. */
+.toc a {
+	color: #cecece !important;
+}
+
+/* Enlaces de la navegación dentro del contenido cuando el mouse está encima. Selector multiple. */
+.toc a:hover{
+	color: #ffffff !important;	
+}
+
+/* Subtítulos. */
+h2 {
+	color:rgb(219, 154, 107);
+	font-family: "Lobster", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	letter-spacing: 2px;
+	text-align: center;
+	font-size: 1.875em;
+}
+
+/* Tabla. */
+table {
+	background: rgb(75, 35, 0);
+	border-collapse: collapse;
+	margin: 1em 1em 1em 0;
+	border-color: rgb(143, 100, 63);
+}
+
+/* Encabezado de tabla. */
+thead {
+	background: rgb(143, 100, 63);	
+	color:rgb(255, 227, 165);
+	border-color: rgb(143, 100, 63) !important;
+	border-collapse: collapse;
+}
+
+/* Selector clase para cada uno de las imágenes de la galería. */
+.galleryitem {
+	border: 1px solid #ccc;
+	height: 180px;
+	width: auto;
+	max-width: 180px;
+	display: inline-block;
+	object-fit: scale-down;	
+}
+
+/* Margen del contenido de la galería respecto al borde. Encadenado al divisor. */
+div.gallery {
+	padding: 15px;
+}
+
+/* Selector clase para el alineamiento para hacer lugar para el cuadro de navegación de contenido. */
+.aboutbeatles {
+	position: relative;
+	left: 30px;
+}
+
+/* Imágen que no es de la galería. */
+.articleimage {
+	position: relative;
+    max-width: 100%;
+	height: auto;
+	vertical-align: top;
+	padding-top: 10px;
+}
+
+/* Formato de la imágen que no es de la galería. */
+figure {
+	float: right;
+	width: 30%;
+	text-align: center;
+	font-style: italic;
+	border: 1px silver solid;
+	margin: 5px;
+	font-size: 0.75em;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"
+}
+
+/* Pie de página. */
+footer {
+	text-align: center;
+	font-style:bold;
+	color: sandybrown !important;
+	background-color: rgb(71, 37, 12);
+	font-size: 0.8125em;
+	padding: 75px 0px;
+	margin: 0px 0px;
+}
+
+/* Enlace del pie de página. Combinador descendiente. */
+footer a {
+	text-decoration: none!important;
+	color:sandybrown !important;
+}
+
+/* Enlace del pie de página cuando el mouse está encima. Combinador descendiente. */
+footer a:hover {
+	text-decoration: none!important;
+	color:rgb(255, 221, 157) !important;
+}
+
+.articleimage[alt="Este soy yo!"] {
+	height:auto;
+	width:150px;
+	margin-bottom:auto;
+}
