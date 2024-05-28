@@ -160,12 +160,6 @@ div.gallery {
 	padding: 15px;
 }
 
-/* Selector clase para el alineamiento para hacer lugar para el cuadro de navegación de contenido. */
-.aboutbeatles {
-	position: relative;
-	left: 30px;
-}
-
 /* Imágen que no es de la galería. */
 .articleimage {
 	position: relative;
